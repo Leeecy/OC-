@@ -15,6 +15,7 @@ int main(int argc, char * argv[]) {
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
         
         NSObject *obj = [[NSObject alloc]init];
+        NSLog(@"obj");
         
     }
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
