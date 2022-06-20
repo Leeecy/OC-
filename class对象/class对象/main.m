@@ -4,6 +4,16 @@
 //
 //  Created by cl on 2022/6/12.
 //
+/**
+ 保存的信息
+ class isa 继承来的isa指针
+ 类对象⾥⾯存储了类的⽗类、
+ 属性、实例⽅法、
+ 协议、
+ 成员变量、
+ ⽅法缓存 cache等等
+ */
+
 
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
