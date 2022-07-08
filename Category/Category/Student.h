@@ -1,16 +1,15 @@
 //
-//  Person+Run.h
+//  Student.h
 //  Category
 //
-//  Created by app on 2022/7/1.
+//  Created by app on 2022/7/4.
 //
 
 #import "Person.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Person (Run)
--(void)run;
+@interface Student : Person
 
 @end
 

@@ -11,6 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Person (Eat)
 -(void)eat;
+@property(nonatomic,strong)NSString *age;
+
+@property(nonatomic,assign)CGFloat height;
+
+@property(nonatomic,copy)NSString *name;
 @end
 
 NS_ASSUME_NONNULL_END
