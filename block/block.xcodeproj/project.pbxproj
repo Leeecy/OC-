@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D14F1B812877DB9500E13204 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D14F1B802877DB9500E13204 /* main.m */; };
+		D1D3F7A1287914CC00CB6EED /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D1D3F7A0287914CC00CB6EED /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,10 @@
 /* Begin PBXFileReference section */
 		D14F1B7D2877DB9500E13204 /* block */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = block; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14F1B802877DB9500E13204 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D14F1B872877FDF700E13204 /* block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = block.cpp; sourceTree = "<group>"; };
+		D14F1B892878096100E13204 /* block1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = block1.cpp; sourceTree = "<group>"; };
+		D1D3F79F287914CC00CB6EED /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D1D3F7A0287914CC00CB6EED /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +62,11 @@
 		D14F1B7F2877DB9500E13204 /* block */ = {
 			isa = PBXGroup;
 			children = (
+				D14F1B892878096100E13204 /* block1.cpp */,
+				D14F1B872877FDF700E13204 /* block.cpp */,
 				D14F1B802877DB9500E13204 /* main.m */,
+				D1D3F79F287914CC00CB6EED /* Person.h */,
+				D1D3F7A0287914CC00CB6EED /* Person.m */,
 			);
 			path = block;
 			sourceTree = "<group>";
@@ -119,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D3F7A1287914CC00CB6EED /* Person.m in Sources */,
 				D14F1B812877DB9500E13204 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
