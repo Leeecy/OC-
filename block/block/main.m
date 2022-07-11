@@ -40,20 +40,49 @@ typedef void (^AABlock)(void);
 typedef void (^CCBlock)(void);
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        Person *per = [[Person alloc]init];
+        __weak typeof(per) weakP = per;
+        per.age = 10;
+        per.name = @"hell";
+        per.pBlock = ^{
+            NSLog(@"%d",weakP.age);
+//            NSLog(@"---------30");
+            NSLog(@"%@",weakP.name);
+        };
+//        per.pBlock();
+        
+        NSLog(@"%@",[per.pBlock class]);
+        NSLog(@"CFGetRetainCount= %ld",CFGetRetainCount((CFTypeRef)(per)));
+        NSLog(@"---------");
+        
+        /**
+        NSObject *obj = [[NSObject alloc]init];
+        
+        AABlock aBc = ^{
+            NSLog(@"%p",obj);
+        };
+        
+        aBc();
+        NSLog(@"type1=  %@ %@",[aBc class],[[aBc class] superclass]);
+        
         AABlock aaBlock;
-        {
-            Person *per = [[Person alloc]init];
-            per.age = 20;
+        __block Person *per = [[Person alloc]init];
+        __strong Person* weakP = per;
+        per.age = 20;
+            __weak typeof(Person) *weakP = per;
+        aaBlock = ^{
             
-            aaBlock = ^{
-            
-                NSLog(@"age====%d",per.age);
-            };
-            
-        }
-        int ee = 10;
+            NSLog(@"age====%@",weakP);
+            per = nil;
+        };
+        aaBlock();
+         */
+      
+    
+        /**
+        __block int ee = 10;
         CCBlock bloc = ^{
-            NSLog(@"age is %d",ee);
+            NSLog(@"ee is %d",ee);
         };
         
         bloc();
@@ -64,7 +93,6 @@ int main(int argc, const char * argv[]) {
         static int d = 40;
         
         void(^block)(int,int)= ^(int a,int b){
-            
             NSLog(@"this is block %d",a+b);
             NSLog(@"auto ivar %d",c);
             NSLog(@"static ivar %d",d);
@@ -76,7 +104,7 @@ int main(int argc, const char * argv[]) {
         
         auto int aaa =10;
         void(^cblock)(void)= ^(){
-            
+         
             NSLog(@"this is cblock %d",aaa);
             
         };
@@ -91,6 +119,7 @@ int main(int argc, const char * argv[]) {
         
         NSLog(@"type4=  %@ %@",[[^{NSLog(@"1111=%d",c);} copy] class],[[^{NSLog(@"1111=%d",c);} class] superclass]);
         NSLog(@"type5=  %@ %@",[^{NSLog(@"1111=%d",c);}  class],[[^{NSLog(@"1111=%d",c);} class] superclass]);
+         */
     }
     return 0;
 }

@@ -9,6 +9,6 @@
 
 @implementation Person
 -(void)dealloc{
-    NSLog(@"Person dealloc");
+    NSLog(@"%s",__func__);
 }
 @end
