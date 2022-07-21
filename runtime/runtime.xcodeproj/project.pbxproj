@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D1EA56D4287BD6AA00E9C237 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EA56D3287BD6AA00E9C237 /* main.m */; };
+		D144D912287D5D2F00FB5ED7 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = D144D90C287D5D2F00FB5ED7 /* Student.m */; };
+		D144D913287D5D2F00FB5ED7 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D144D90D287D5D2F00FB5ED7 /* Person.m */; };
+		D144D914287D5D2F00FB5ED7 /* GoodStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = D144D911287D5D2F00FB5ED7 /* GoodStudent.m */; };
+		D1EA56D4287BD6AA00E9C237 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1EA56D3287BD6AA00E9C237 /* main.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D144D8E2287D24F100FB5ED7 /* ClassInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassInfo.h; sourceTree = "<group>"; };
+		D144D90C287D5D2F00FB5ED7 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		D144D90D287D5D2F00FB5ED7 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		D144D90E287D5D2F00FB5ED7 /* GoodStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodStudent.h; sourceTree = "<group>"; };
+		D144D90F287D5D2F00FB5ED7 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		D144D910287D5D2F00FB5ED7 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D144D911287D5D2F00FB5ED7 /* GoodStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodStudent.m; sourceTree = "<group>"; };
 		D1EA56D0287BD6AA00E9C237 /* runtime */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = runtime; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1EA56D3287BD6AA00E9C237 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D1EA56D3287BD6AA00E9C237 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +67,14 @@
 		D1EA56D2287BD6AA00E9C237 /* runtime */ = {
 			isa = PBXGroup;
 			children = (
-				D1EA56D3287BD6AA00E9C237 /* main.m */,
+				D1EA56D3287BD6AA00E9C237 /* main.mm */,
+				D144D90E287D5D2F00FB5ED7 /* GoodStudent.h */,
+				D144D911287D5D2F00FB5ED7 /* GoodStudent.m */,
+				D144D910287D5D2F00FB5ED7 /* Person.h */,
+				D144D90D287D5D2F00FB5ED7 /* Person.m */,
+				D144D90F287D5D2F00FB5ED7 /* Student.h */,
+				D144D90C287D5D2F00FB5ED7 /* Student.m */,
+				D144D8E2287D24F100FB5ED7 /* ClassInfo.h */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -119,7 +136,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1EA56D4287BD6AA00E9C237 /* main.m in Sources */,
+				D144D914287D5D2F00FB5ED7 /* GoodStudent.m in Sources */,
+				D144D913287D5D2F00FB5ED7 /* Person.m in Sources */,
+				D1EA56D4287BD6AA00E9C237 /* main.mm in Sources */,
+				D144D912287D5D2F00FB5ED7 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
