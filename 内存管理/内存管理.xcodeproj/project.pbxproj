@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D154C7C7288A4BDB00F3C9A6 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = D154C7C6288A4BDB00F3C9A6 /* GCDTimer.m */; };
+		D154C7CA288A76A300F3C9A6 /* GCDTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D154C7C9288A76A300F3C9A6 /* GCDTimerViewController.m */; };
 		D1AE04CD2889446200624896 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE04CC2889446200624896 /* AppDelegate.m */; };
 		D1AE04D02889446200624896 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE04CF2889446200624896 /* SceneDelegate.m */; };
 		D1AE04D32889446200624896 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1AE04D22889446200624896 /* ViewController.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D154C7C5288A4BDB00F3C9A6 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDTimer.h; path = ../../GCD/GCD/GCDTimer.h; sourceTree = "<group>"; };
+		D154C7C6288A4BDB00F3C9A6 /* GCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCDTimer.m; path = ../../GCD/GCD/GCDTimer.m; sourceTree = "<group>"; };
+		D154C7C8288A76A300F3C9A6 /* GCDTimerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTimerViewController.h; sourceTree = "<group>"; };
+		D154C7C9288A76A300F3C9A6 /* GCDTimerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTimerViewController.m; sourceTree = "<group>"; };
 		D1AE04C82889446200624896 /* 内存管理.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "内存管理.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1AE04CB2889446200624896 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D1AE04CC2889446200624896 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 		D1AE04CA2889446200624896 /* 内存管理 */ = {
 			isa = PBXGroup;
 			children = (
+				D154C7C5288A4BDB00F3C9A6 /* GCDTimer.h */,
+				D154C7C6288A4BDB00F3C9A6 /* GCDTimer.m */,
 				D1AE04CB2889446200624896 /* AppDelegate.h */,
 				D1AE04CC2889446200624896 /* AppDelegate.m */,
 				D1AE04CE2889446200624896 /* SceneDelegate.h */,
@@ -78,6 +86,8 @@
 				D1AE04D22889446200624896 /* ViewController.m */,
 				D1AE04E42889460500624896 /* TimeViewController.h */,
 				D1AE04E52889460500624896 /* TimeViewController.m */,
+				D154C7C8288A76A300F3C9A6 /* GCDTimerViewController.h */,
+				D154C7C9288A76A300F3C9A6 /* GCDTimerViewController.m */,
 				D1AE04EA28894BF300624896 /* TimerPersent.h */,
 				D1AE04EB28894BF300624896 /* TimerPersent.m */,
 				D1AE04E7288948FD00624896 /* TimerProxy.h */,
@@ -165,6 +175,8 @@
 				D1AE04D32889446200624896 /* ViewController.m in Sources */,
 				D1AE04CD2889446200624896 /* AppDelegate.m in Sources */,
 				D1AE04EC28894BF300624896 /* TimerPersent.m in Sources */,
+				D154C7C7288A4BDB00F3C9A6 /* GCDTimer.m in Sources */,
+				D154C7CA288A76A300F3C9A6 /* GCDTimerViewController.m in Sources */,
 				D1AE04DE2889446300624896 /* main.m in Sources */,
 				D1AE04D02889446200624896 /* SceneDelegate.m in Sources */,
 				D1AE04E62889460500624896 /* TimeViewController.m in Sources */,

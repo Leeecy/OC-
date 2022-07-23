@@ -21,6 +21,7 @@
 @property(nonatomic,strong)GroupQueue *group;
 @property(nonatomic,strong)dispatch_semaphore_t semaphore;
 @property(nonatomic,strong)dispatch_queue_t queue;
+@property(nonatomic,assign)int num;
 @end
 
 @implementation ViewController
@@ -135,27 +136,128 @@
     }
 
 }
+-(void)read2{
+    NSLog(@"read2");
+}
+-(void)asyncMain{
+    dispatch_queue_t q1 = dispatch_get_main_queue();
+    // 2. 安排一个任务
+    for  ( int  i = 0; i<10; i++) {
+         dispatch_async(q1, ^{
+             NSLog (@ "%@ %d" , [ NSThread  currentThread], i);
+         });
+    }
+    [ NSThread  sleepForTimeInterval:1.0];
+    NSLog (@ "睡会" );
+    [ NSThread  sleepForTimeInterval:2.0];
+    NSLog (@ "come here" );
+}
+-(void)concureentAsync{
+    dispatch_queue_t q = dispatch_queue_create( "dantesx" , DISPATCH_QUEUE_CONCURRENT );
+    for  ( int  i = 0; i<100; i++) {
 
+//        NSLog(@"%d",i);
+        
+//        [[[NSThread alloc]initWithTarget:self selector:@selector(read2) object:nil]start];
+        
+//        dispatch_queue_t q = dispatch_queue_create( "dantesx" , DISPATCH_QUEUE_CONCURRENT );
+
+         dispatch_async(q, ^{
+             NSLog (@ "%@ %d" , [ NSThread  currentThread], i);
+         });
+    }
+    [NSThread sleepForTimeInterval:0.001];
+    NSLog (@ "come here %@", [NSThread  currentThread]);
+    
+    
+    NSLog(@"1");
+
+    //异步并发
+    dispatch_async( q, ^{
+        NSLog(@"2,%@",[NSThread currentThread]);
+        NSLog(@"3,%@",[NSThread currentThread]);
+    });
+    dispatch_async( q, ^{
+        NSLog(@"4,%@",[NSThread currentThread]);
+        NSLog(@"5,%@",[NSThread currentThread]);
+    });
+    NSLog(@"6");
+    
+}
+-(void)sub{
+    int a = self.num;
+    sleep(.2);
+    a -= 10;
+    self.num = a;
+    NSLog(@"sub之后%d",self.num);
+}
+-(void)add{
+    int a = self.num;
+    sleep(.2);
+    int b = a + 10;
+    self.num = b;
+    NSLog(@"add之后%d",self.num);
+}
+-(void)semaphoreT{
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self demo2];
+    self.queue = dispatch_queue_create("rw_queue", DISPATCH_QUEUE_CONCURRENT);
+    
+    // 1. 主队列 － 程序启动之后已经存在主线程，主队列同样存在
+  
+    //异步主队列
+//    [self asyncMain];
+    
+    //并发队列异步
+//    [self concureentAsync];
+   
+//    [self demo2];
 //    self.group = [[GroupQueue alloc]init];
 //    [self.group handle];
     
-    [self concurrentQueueAsyncAndSync2BarrrierTest];
-    self.queue = dispatch_queue_create("rw_queue", DISPATCH_QUEUE_CONCURRENT);
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     
-    for (int i =0; i<5; i++) {
-//        [[[NSThread alloc]initWithTarget:self selector:@selector(read) object:nil]start];
-//        [[[NSThread alloc]initWithTarget:self selector:@selector(write) object:nil]start];
-        
-//        [self read];
-//        [self read];
-//        [self read];
-        [self write];
-//        [self write];
-    }
+    self.num = 20;
+    dispatch_semaphore_t t1 = dispatch_semaphore_create(3);
+    //信号量测试
+
+//    dispatch_semaphore_wait(t1, DISPATCH_TIME_FOREVER);
+//    dispatch_async(self.queue, ^{
+//        for (int i = 0; i<8; i++) {
+//            [self sub];
+////            [self semaphoreT];
+//        }
+//    });
+//    dispatch_semaphore_signal(t1);
+    
+    for (NSInteger i = 0; i < 9; i++) {
+            
+            dispatch_async(self.queue, ^{
+                //当信号量为0时候，阻塞当前线程
+                dispatch_semaphore_wait(t1, DISPATCH_TIME_FOREVER);
+                NSLog(@"执行任务 %ld", i);
+                sleep(1);
+                NSLog(@"完成当前任务 %ld", i);
+                //释放信号
+                dispatch_semaphore_signal(t1);
+            });
+        }
+    
+//    dispatch_semaphore_wait(t1, DISPATCH_TIME_FOREVER);
+//    dispatch_async(self.queue, ^{
+//        for (int i = 0; i<8; i++) {
+//            [self add];
+//        }
+//    });
+//    dispatch_semaphore_signal(t1);
+    
+    
+    //栅栏函数测试
+//    [self concurrentQueueAsyncAndSync2BarrrierTest];
+    
+    //测试读写
+//    [self testWriteRead];
     
     self.arr = [NSMutableArray array];//这句操作set方法 加锁了 线程安全
     [self.arr addObject:@"1"];//这句不是线程安全 addObject和set方法没关系了
@@ -184,6 +286,18 @@
 //        }
 //    });
     
+}
+-(void)testWriteRead{
+    for (int i =0; i<5; i++) {
+//        [[[NSThread alloc]initWithTarget:self selector:@selector(read) object:nil]start];
+//        [[[NSThread alloc]initWithTarget:self selector:@selector(write) object:nil]start];
+        
+//        [self read];
+//        [self read];
+//        [self read];
+        [self write];
+//        [self write];
+    }
 }
 -(void)addSum{
     int a = 10;

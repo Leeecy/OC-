@@ -27,7 +27,7 @@
         <!--View Controller-->
         <scene sceneID="k9X-8P-Zkc">
             <objects>
-                <viewController id="9Yv-Se-lWa" sceneMemberID="viewController">
+                <viewController id="9Yv-Se-lWa" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dnz-SC-ozt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,6 +41,15 @@
                                     <segue destination="EbD-Xj-wEL" kind="show" id="avA-6x-PcS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTC-z8-8ng">
+                                <rect key="frame" x="116" y="347" width="100" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GCD"/>
+                                <connections>
+                                    <segue destination="50B-p9-xVm" kind="show" id="Ake-iV-TI5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3do-oh-9iR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -49,7 +58,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWy-UU-gR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="301" y="54"/>
+            <point key="canvasLocation" x="300" y="53.571428571428569"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="E70-4h-Ghs">
+            <objects>
+                <viewController id="50B-p9-xVm" customClass="GCDTimerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MYF-DY-WvW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lys-qV-cqo">
+                                <rect key="frame" x="186" y="203" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Dq-gA-u3f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vut-Vx-uae"/>
+                    <connections>
+                        <outlet property="label" destination="lys-qV-cqo" id="pUE-Lc-1jI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr7-1x-Ssp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044.9275362318842" y="-569.19642857142856"/>
         </scene>
         <!--Time View Controller-->
         <scene sceneID="H8g-Xj-MPQ">

@@ -14,6 +14,7 @@
 		D13A277A2887AEF0003310F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13A27792887AEF0003310F9 /* Assets.xcassets */; };
 		D13A277D2887AEF0003310F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D13A277B2887AEF0003310F9 /* LaunchScreen.storyboard */; };
 		D13A27802887AEF0003310F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D13A277F2887AEF0003310F9 /* main.m */; };
+		D154C7C4288A4A9200F3C9A6 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = D154C7C3288A4A9200F3C9A6 /* GCDTimer.m */; };
 		D16B7DD52888DE0B00463DB9 /* MutexDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B7DD32888DE0B00463DB9 /* MutexDemo.m */; };
 		D16B7DD62888DE0B00463DB9 /* SerialQueueDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B7DBF2888DE0A00463DB9 /* SerialQueueDemo.m */; };
 		D16B7DD72888DE0B00463DB9 /* NSLockDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D16B7DC82888DE0A00463DB9 /* NSLockDemo.m */; };
@@ -44,6 +45,8 @@
 		D13A277C2887AEF0003310F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D13A277E2887AEF0003310F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D13A277F2887AEF0003310F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D154C7C2288A4A9200F3C9A6 /* GCDTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
+		D154C7C3288A4A9200F3C9A6 /* GCDTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTimer.m; sourceTree = "<group>"; };
 		D16B7DB92888DE0A00463DB9 /* SynchronizedDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SynchronizedDemo.h; sourceTree = "<group>"; };
 		D16B7DBA2888DE0A00463DB9 /* MutexDemo3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MutexDemo3.m; sourceTree = "<group>"; };
 		D16B7DBB2888DE0A00463DB9 /* SBaseDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBaseDemo.m; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 				D13A27712887AEEF003310F9 /* SceneDelegate.m */,
 				D13A27732887AEEF003310F9 /* ViewController.h */,
 				D13A27742887AEEF003310F9 /* ViewController.m */,
+				D154C7C2288A4A9200F3C9A6 /* GCDTimer.h */,
+				D154C7C3288A4A9200F3C9A6 /* GCDTimer.m */,
 				D13A27762887AEEF003310F9 /* Main.storyboard */,
 				D13A27792887AEF0003310F9 /* Assets.xcassets */,
 				D13A277B2887AEF0003310F9 /* LaunchScreen.storyboard */,
@@ -233,6 +238,7 @@
 				D16B7DE22888DE0B00463DB9 /* MutexDemo4.m in Sources */,
 				D16B7DD92888DE0B00463DB9 /* NSConditionLockDemo.m in Sources */,
 				D16B7DD62888DE0B00463DB9 /* SerialQueueDemo.m in Sources */,
+				D154C7C4288A4A9200F3C9A6 /* GCDTimer.m in Sources */,
 				D16B7DDF2888DE0B00463DB9 /* SemaphoreDemo.m in Sources */,
 				D16B7DE02888DE0B00463DB9 /* MutexDemo3.m in Sources */,
 				D13A27752887AEEF003310F9 /* ViewController.m in Sources */,
